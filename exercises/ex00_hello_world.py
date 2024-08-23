@@ -4,5 +4,5 @@ __author__ = "730475190"
 
 
 def greet(name: str) -> str:
-    """ "A welcoming first function definition."""
+    """A welcoming first function definition."""
     return "Hello, " + name + "!"
