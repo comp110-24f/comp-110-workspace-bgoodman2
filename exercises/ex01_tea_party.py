@@ -1,19 +1,16 @@
 """planning a cozy tea party!"""
 
-_author_: str = "730475190"  # my PID and identification for the professor :)
+__author__ = "730475190"  # my identification for the professor :)
 
 
-def main_planner(guests: int) -> int:
+def main_planner(guests: int) -> None:
     """number of guests attending"""
-    tea_count = tea_bags(guests)
-    treat_count = treats(guests)
-    total_cost = cost(tea_count, treat_count)
     print("A Cozy Tea Party for " + str(guests) + " People!")
-    print("Tea Bags: " + str(tea_count))
-    print("Treats: " + str(treat_count))
+    print("Tea Bags: " + str(tea_bags(guests)))
+    print("Treats: " + str(treats(people=guests)))
     print(
-        "Cost: $" + str(total_cost)
-    )  # all of the above print functions should return the computations already done in the earlier definitions (this was by far the hardest for myself to complete)
+        "Cost: $" + str(cost(tea_bags(guests), treats(people=guests)))
+    )  # above print functions should return the computations done earlier in def.
 
 
 def tea_bags(people: int) -> int:
@@ -23,7 +20,9 @@ def tea_bags(people: int) -> int:
 
 def treats(people: int) -> int:
     """defining the treat function, number of treats"""
-    return int(tea_bags(people) * 1.5)
+    return int(
+        tea_bags(people=people) * 1.5
+    )  # call to tea_bags with a keyword argument
 
 
 def cost(tea_count: int, treat_count: int) -> float:
@@ -34,4 +33,4 @@ def cost(tea_count: int, treat_count: int) -> float:
 if __name__ == "__main__":
     main_planner(
         guests=int(input("how many guests are attending your tea party"))
-    )  # always you to use the "run" function in the trailhead
+    )  # need to write to use the "run" function in the trailhead
