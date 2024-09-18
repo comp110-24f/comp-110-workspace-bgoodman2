@@ -7,7 +7,7 @@ def num_instances(
     phrase: str, search_char: str
 ) -> int:  # defining the function and parameters
     if len(search_char) != 1:
-        raise ValueError("search_char must be a single character")
+        return 0
 
     count = 0  # defining count
     index = 0  # defining index
