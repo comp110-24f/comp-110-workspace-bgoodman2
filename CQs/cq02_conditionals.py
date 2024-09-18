@@ -8,10 +8,10 @@ def guess_a_number() -> None:
     # Prompt for the user input
     guess = int(input("Guess a number: "))
 
-    # Print user guess
+    # Print user guess shown in the trailhead and REPL
     print("Your guess was", guess)
 
-    # Provide feedback based on the guess
+    # Provides feedback based on the guess
     if guess == secret:
         print("You got it!")
     elif guess < secret:
@@ -19,7 +19,6 @@ def guess_a_number() -> None:
     else:
         print("Your guess was too high! The secret number is", secret)
 
-    # Explicitly return None
     return None
 
 
