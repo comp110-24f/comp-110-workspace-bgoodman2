@@ -10,7 +10,7 @@ def mimic(message: str) -> str:
 
 def main() -> None:
     """wont print anything"""
-    return none
+    return None
 
 
 print(mimic(message=input("What is your message")))
