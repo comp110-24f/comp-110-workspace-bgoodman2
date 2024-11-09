@@ -4,7 +4,6 @@ __author__ = "730475190"
 
 from exercises.ex07.bear import Bear
 from exercises.ex07.fish import Fish
-from typing import List
 
 
 class River:
@@ -13,8 +12,8 @@ class River:
     def __init__(self, num_fish: int, num_bears: int) -> None:
         """Initialize with given number of fish and bears."""
         self.day: int = 0
-        self.fish: List[Fish] = [Fish() for _ in range(num_fish)]
-        self.bears: List[Bear] = [Bear() for _ in range(num_bears)]
+        self.fish: list[Fish] = [Fish() for _ in range(num_fish)]
+        self.bears: list[Bear] = [Bear() for _ in range(num_bears)]
 
     def view_river(self) -> None:
         """Print current state of the river."""
